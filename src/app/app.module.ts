@@ -1,18 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+//libraries
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { AppRoutingModule } from "./app-routing.module";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+//components
+import { AppComponent } from "./app.component";
+
+//services
+import { WorkerIDBService } from "./services/worker-idb.service";
+import { IndexedDBService } from "./services/indexed-db.service";
+
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  providers: [WorkerIDBService, IndexedDBService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+
+export class AppModule {}
