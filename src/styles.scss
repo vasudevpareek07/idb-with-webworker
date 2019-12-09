@@ -10,3 +10,41 @@ body {
   overflow: hidden;
   position: relative;
 }
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-item-balloon{
+  flex: 1 1 0;
+}
+
+.flex-item-fixed{
+  flex: 0 0 1;
+}
+
+.align-items-center{
+  align-items: center;
+}
+
+.justify-content-center{
+  justify-content: center;
+}
+
+.wide-div{
+  width: 100%;
+}
+
+.tall-div{
+  height: 100%;
+}
+
+.margin-bottom-md{
+  margin-bottom: 25px;
+}
