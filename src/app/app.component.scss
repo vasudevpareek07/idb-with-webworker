@@ -6,6 +6,44 @@
   width: 2px;
 }
 
+.btn-block{
+  width: 270px;
+  font-weight: bold;
+}
+
+label{
+  color: lightpink;
+  margin-bottom: 10px;
+}
+
+.entries-block{
+  margin-bottom: 50px;
+  border: none;
+  outline: none;
+}
+
+@media (min-width:300px) and (max-width: 640px) {
+  .entries-block{
+    width: 300px; 
+  }
+
+  label{
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 641px) { 
+  .entries-block{
+    width: 50vw;
+  }
+
+  label{
+    font-size: 18px;
+  }
+}
+
+
+
 $rain: 300;
 
 @for $i from 1 through $rain {

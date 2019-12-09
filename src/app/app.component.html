@@ -1,18 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <router-outlet></router-outlet>
 
-<input
-  type="number"
-  [ngModel]="objectsCount"
-  (ngModelChange)="objectsCount = $event"
-/>
-<button (click)="createObjects(objectsCount, true)">
-  Update IDB in Background Thread (Web Worker)
-</button>
+<div class="parent-container flex-column justify-content-center align-items-center tall-div">
+  <div class="entries-block">
+      <label>Enter the No. of entries to be updated in IndexeDB :</label>
+      <input type="number" class="form-control wide-div" [ngModel]="objectsCount" (ngModelChange)="objectsCount = $event"/>
+  </div>
 
-<button (click)="createObjects(objectsCount, false)">
-  Update IDB in Main Thread
-</button>
+  <button class="btn btn-md btn-danger margin-bottom-md btn-block" (click)="createObjects(objectsCount, false)">
+    Update IndexedDB in Main Thread
+  </button>
+
+  <button class="btn btn-md btn-success margin-bottom-md btn-block" (click)="createObjects(objectsCount, true)">
+    Update IndexedDB with Web Worker
+  </button>
+
+</div>
 
 <i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i
 ><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i
