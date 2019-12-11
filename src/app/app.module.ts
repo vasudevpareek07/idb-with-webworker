@@ -3,6 +3,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { AppRoutingModule } from "./app-routing.module";
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 //components
 import { AppComponent } from "./app.component";
@@ -15,7 +16,7 @@ import { IndexedDBService } from "./services/indexed-db.service";
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [WorkerIDBService, IndexedDBService],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, WorkerIDBService, IndexedDBService],
   bootstrap: [AppComponent]
 })
 
