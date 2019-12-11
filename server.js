@@ -6,11 +6,11 @@ const app = express();
 
 // Serve only the static files from the dist directory
 
-app.use(express.static(path.join(__dirname, '/dist/service-worker-with-idb')));
+app.use(express.static(path.join(__dirname, '/dist/service-worker-with-IDB')));
 
 app.get('/*', function(req,res) {
     
-res.sendFile(path.join(__dirname,'/dist/service-worker-with-idb/index.html'));
+res.sendFile(path.join(__dirname,'/dist/service-worker-with-IDB/index.html'));
 });
 
 // Start the app by listening on the default Heroku port
